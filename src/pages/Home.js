@@ -9,10 +9,13 @@ const Home = () => {
   return (
     <>
       <div className="">
-        <h1 className="text-3xl font-bold underline">welcome</h1>
+        <h1 className="text-3xl font-bold underline">0xconnect</h1>
       </div>
       <div>
         <ul>
+          <li>
+            <Link to="/alljobs">Jobs</Link>
+          </li>
           <li>
             <Link to="/login">Sign In</Link>
           </li>
@@ -28,16 +31,23 @@ const Home = () => {
           </li>
 
           {role && (
-            <li>
-              <Link to="/login">
-                <span
-                  onClick={() => firebase.logout()}
-                  className="text-sm  ml-2"
-                >
-                  Logout
-                </span>
-              </Link>
-            </li>
+            <ul>
+              <li>
+                <Link to="/dashboard">
+                  <span className="text-sm  ml-2">Dashboard</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/login">
+                  <span
+                    onClick={() => firebase.logout()}
+                    className="text-sm  ml-2"
+                  >
+                    Logout
+                  </span>
+                </Link>
+              </li>
+            </ul>
           )}
         </ul>
       </div>

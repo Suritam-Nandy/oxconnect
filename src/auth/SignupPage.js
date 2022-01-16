@@ -36,17 +36,17 @@ const SignupPage = () => {
                 <div>
                   <button
                     className={`${
-                      role === "Apllicant"
+                      role === "Applicant"
                         ? "text-blueGray-700"
                         : "text-blueGray-500"
                     }  bg-white text-blueGray-500  hover:text-blueGray-700 active:text-blueGray-700 px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150`}
                     type="button"
                     onClick={() => {
-                      setRole("Apllicant");
+                      setRole("Applicant");
                     }}
                   >
                     {/* <FcGoogle className="mr-1" size={20} /> */}
-                    Apllicant
+                    Applicant
                   </button>
                   <hr className="mt-2 border-b-1 border-blueGray-300" />
                 </div>
