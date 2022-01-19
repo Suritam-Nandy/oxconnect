@@ -17,7 +17,10 @@ const Company = () => {
   return (
     <>
       <div>
-        <h1 className="text-2xl"> Jobs </h1>
+        <h1 className="text-2xl"> Company Name </h1>
+      </div>
+      <div>
+        <h1 className="text-2xl"> About </h1>
       </div>
       <div>
         <table className="min-w-full divide-y divide-gray-200 h-96 ">
