@@ -8,6 +8,8 @@ import Signup from "./auth/SignUp";
 import Login from "./auth/Login";
 import SignupPage from "./auth/SignupPage";
 import Dashboard from "./pages/Dashboard";
+import Companies from "./pages/Companies";
+import Company from "./pages/Company";
 import AddJob from "./pages/AddJob";
 import AllJobs from "./pages/AllJobs";
 import Job from "./pages/Job";
@@ -22,6 +24,8 @@ function App() {
           */}
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/companies" component={Companies} />
+            <Route exact path="/company/:id" component={Company} />
 
             <Route exact path="/job/:id" component={Job} />
             <Route exact path="/dashboard" component={Dashboard} />

@@ -17,6 +17,9 @@ const Home = () => {
             <Link to="/alljobs">Jobs</Link>
           </li>
           <li>
+            <Link to="/companies">Companies</Link>
+          </li>
+          <li>
             <Link to="/login">Sign In</Link>
           </li>
           <li>
