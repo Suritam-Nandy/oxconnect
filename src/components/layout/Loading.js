@@ -2,14 +2,8 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="loading">
-      <div
-        className="spinner-border text-primary"
-        role="status"
-        style={{ width: "150px", height: "150px" }}
-      >
-        <span className="sr-only">Loading...</span>
-      </div>
+    <div class="flex items-center justify-center h-screen">
+      <div class="w-24 h-24 border-l-2 border-gray-900 rounded-full animate-spin"></div>
     </div>
   );
 };
