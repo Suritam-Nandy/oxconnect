@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useFirestoreConnect, useFirestore } from "react-redux-firebase";
-
+import {
+  HiOutlineLocationMarker,
+  HiOutlineGlobeAlt,
+  HiMail,
+} from "react-icons/hi";
 import Loading from "../components/layout/Loading";
 const Company = () => {
   // const firebase = useFirebase();
@@ -47,21 +51,30 @@ const Company = () => {
   return (
     <>
       <div className="max-w-6xl mx-auto lg:px-2 mb-2">
-        <div className="h-56 bg-blueGray-500 flex items-center p-2 mb-2">
+        <div className="h-56 bg-purple-700 flex items-center p-2 mb-2">
           <h1 className="text-5xl font-black tracking-wider text-white">
             {company.displayName}
           </h1>
         </div>
         <div className="mb-4 p-2">
-          <h1 className="text-3xl font-bold tracking-wide text-blueGray-500">
+          <h1 className="text-3xl font-bold tracking-wide text-warmGray-800">
             {company.displayName}
           </h1>
           <h1 className="text-2xl  text-black">some tagline</h1>
         </div>
         <div className=" flex flex-row justify-start mb-16 p-2 text-xl">
-          <div className="mr-10">location</div>
-          <div className="mr-10">website</div>
-          <div>mail</div>
+          <div className="mr-10 flex flex-row ">
+            <HiOutlineLocationMarker className="w-6 h-6 stroke-purple-800" />
+            <div>location</div>
+          </div>
+          <div className="mr-10 flex flex-row ">
+            <HiOutlineGlobeAlt className="mt-0.5 w-6 h-6  stroke-purple-800" />
+            <div>website</div>
+          </div>
+          <div className="mr-10 flex flex-row ">
+            <HiMail className="mt-1 w-6 h-6  fill-purple-800" />
+            <div>mail</div>
+          </div>
         </div>
         <div className="px-2">
           <div className="flex flex-row justify-start text-3xl font-medium mb-10 border-black border-solid border-b pb-4">
