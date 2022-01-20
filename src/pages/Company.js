@@ -41,7 +41,7 @@ const Company = () => {
       console.log("Error getting document:", error);
     }
   };
-  if (!company) {
+  if (!company || !jobs) {
     return <Loading />;
   }
   return (
