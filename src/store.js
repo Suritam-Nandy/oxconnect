@@ -18,24 +18,24 @@ import { createFirestoreInstance } from "redux-firestore"; // <- needed if using
 // };
 //!new
 // 0xconnect
-const fbConfig = {
-  apiKey: "AIzaSyAv9UnuK-R2m9LRpRLoqZlj4Tg8UlSt5xQ",
-  authDomain: "xconnect-a8d98.firebaseapp.com",
-  projectId: "xconnect-a8d98",
-  storageBucket: "xconnect-a8d98.appspot.com",
-  messagingSenderId: "31137271471",
-  appId: "1:31137271471:web:90678c1c55fe2ceb9c0e5a",
-};
-// !old
 // const fbConfig = {
-//   apiKey: "AIzaSyAh0cK7VxVMPeRvr7W3r1e0X-pI1Uhiv1Q",
-//   authDomain: "litestore-242f8.firebaseapp.com",
-//   projectId: "litestore-242f8",
-//   storageBucket: "litestore-242f8.appspot.com",
-//   messagingSenderId: "489960878790",
-//   appId: "1:489960878790:web:31df43286dafe2fd685dc7",
-//   measurementId: "G-BYVYDLZKLJ",
+//   apiKey: "AIzaSyAv9UnuK-R2m9LRpRLoqZlj4Tg8UlSt5xQ",
+//   authDomain: "xconnect-a8d98.firebaseapp.com",
+//   projectId: "xconnect-a8d98",
+//   storageBucket: "xconnect-a8d98.appspot.com",
+//   messagingSenderId: "31137271471",
+//   appId: "1:31137271471:web:90678c1c55fe2ceb9c0e5a",
 // };
+// !old
+const fbConfig = {
+  apiKey: "AIzaSyAh0cK7VxVMPeRvr7W3r1e0X-pI1Uhiv1Q",
+  authDomain: "litestore-242f8.firebaseapp.com",
+  projectId: "litestore-242f8",
+  storageBucket: "litestore-242f8.appspot.com",
+  messagingSenderId: "489960878790",
+  appId: "1:489960878790:web:31df43286dafe2fd685dc7",
+  measurementId: "G-BYVYDLZKLJ",
+};
 
 // react-redux-firebase config
 const rrfConfig = {
