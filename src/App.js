@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import Companies from "./pages/Companies";
 import Company from "./pages/Company";
 import AddJob from "./pages/AddJob";
+import UpdateProfile from "./pages/UpdateProfile";
 import AllJobs from "./pages/AllJobs";
 import Job from "./pages/Job";
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/addjob" component={AddJob} />
             <Route exact path="/addjob/:id" component={AddJob} />
+            <Route exact path="/updateprofile/:id" component={UpdateProfile} />
 
             <Route exact path="/alljobs" component={AllJobs} />
 
