@@ -102,7 +102,32 @@ const Company = () => {
         <div className=" text-3xl font-semibold px-2 mb-16">
           <div className="">
             <h1 className="mb-2 ">Jobs</h1>
-            <table className="min-w-full divide-y divide-gray-200 h-96 ">
+            <div className="h-96 bg-blueGray-100 p-2">
+              {jobs.map((job, index) => (
+                <Link to={`/job/${job.id}`}>
+                  <div
+                    key={job.index}
+                    className="h-24 bg-purple-600 rounded-lg flex flex-row p-1 w-full"
+                  >
+                    <div className="image h-16 w-16 bg-pink-300 m-3 rounded-md"></div>
+                    <div className="flex flex-col p-1 w-7/12">
+                      <h1 className="font- font-semibold text-white ml-5">
+                        {job.title}
+                      </h1>
+                      <div className="flex flex-row items-center justify-around w-full text-lg p-1 mt-1.5">
+                        <p className="">location</p>
+                        <p>5 vacancy</p>
+                        <p>we pay in crpto</p>
+                      </div>
+                    </div>
+                    <div className="ml-16 p-5 flex justify-end w-3/12">
+                      <h1 className="font-bold text-white">1W</h1>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            {/* <table className="min-w-full divide-y divide-gray-200 h-96 ">
               <thead className="bg-gray-50 ">
                 <tr>
                   <th
@@ -125,31 +150,31 @@ const Company = () => {
                   </th>
                 </tr>
               </thead>
-              <tbody className="bg-white divide-y divide-gray-200 ">
-                {jobs.map((job, index) => (
-                  <tr key={job.index}>
-                    <td className="px-6 py-4 whitespace-nowrap h-32">
-                      <div className="flex items-center">
-                        <div className="text-sm text-left font-medium text-gray-900">
-                          {index + 1}
-                        </div>
-                      </div>
-                    </td>
-                    <Link to={`/job/${job.id}`}>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-sm font-medium text-gray-900">
-                          {job.title}
+              <tbody className="bg-white divide-y divide-gray-200 "> */}
+            {/* {jobs.map((job, index) => (
+                    <tr key={job.index}>
+                      <td className="px-6 py-4 whitespace-nowrap h-32">
+                        <div className="flex items-center">
+                          <div className="text-sm text-left font-medium text-gray-900">
+                            {index + 1}
+                          </div>
                         </div>
                       </td>
-                    </Link>
+                      <Link to={`/job/${job.id}`}>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm font-medium text-gray-900">
+                            {job.title}
+                          </div>
+                        </td>
+                      </Link>
 
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {job.description}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {job.description}
+                      </td>
+                    </tr>
+                ))} */}
+            {/* </tbody>
+            </table> */}
           </div>
         </div>
       </div>
