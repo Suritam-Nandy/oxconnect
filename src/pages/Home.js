@@ -14,7 +14,7 @@ const Home = () => {
       <div>
         <ul>
           <li>
-            <Link to="/alljobs">Jobs</Link>
+            <Link to="/alljobs">Bounty Jobs</Link>
           </li>
           <li>
             <Link to="/companies">Companies</Link>
