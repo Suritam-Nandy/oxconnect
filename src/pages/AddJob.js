@@ -14,8 +14,11 @@ const AddJob = () => {
     : null;
   const [job, setJob] = useState({
     title: "",
+    location: "",
+    vacancy: "",
+    payment: "",
+
     description: "",
-    applicants: 0,
   });
 
   // load job to edit
@@ -94,16 +97,44 @@ const AddJob = () => {
       <div>
         <h1 className="text-2xl"> Job Listing</h1>
       </div>
-      <div className="flex flex-col m-1 w-full">
-        <h1>Title</h1>
-        <Input
-          placeholder="Enter Title"
-          name="title"
-          value={job.title}
-          onChange={onInputChange}
-        />
-      </div>
       <form onSubmit={submitForm}>
+        <div className="flex flex-col m-1 w-full">
+          <h1>Title</h1>
+          <Input
+            placeholder="Enter Title"
+            name="title"
+            value={job.title}
+            onChange={onInputChange}
+          />
+        </div>
+        <div className="flex flex-col m-1 w-full">
+          <h1>Location</h1>
+          <Input
+            placeholder="Enter Location"
+            name="location"
+            value={job.location}
+            onChange={onInputChange}
+          />
+        </div>
+        <div className="flex flex-col m-1 w-full">
+          <h1>Number of Vacancies</h1>
+          <Input
+            placeholder="Enter Vacancy"
+            name="vacancy"
+            value={job.vacancy}
+            onChange={onInputChange}
+          />
+        </div>
+        <div className="flex flex-col m-1 w-full">
+          <h1>Payment mode</h1>
+          <Input
+            placeholder="Enter Payment"
+            name="payment"
+            value={job.payment}
+            onChange={onInputChange}
+          />
+        </div>
+
         <div className="flex flex-col m-1 w-full">
           <h1>Description</h1>
           <Input

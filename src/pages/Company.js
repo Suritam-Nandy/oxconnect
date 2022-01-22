@@ -101,13 +101,13 @@ const Company = () => {
         </div>
         <div className=" text-3xl font-semibold px-2 mb-16">
           <div className="">
-            <h1 className="mb-2 ">Jobs</h1>
+            <h1 className=" ">Jobs</h1>
             <div className="h-96 bg-blueGray-100 p-2">
               {jobs.map((job, index) => (
                 <Link to={`/job/${job.id}`}>
                   <div
                     key={job.index}
-                    className="h-24 bg-purple-600 rounded-lg flex flex-row p-1 w-full"
+                    className="h-24 bg-purple-600 rounded-lg flex flex-row p-1 w-full my-5"
                   >
                     <div className="image h-16 w-16 bg-pink-300 m-3 rounded-md"></div>
                     <div className="flex flex-col p-1 w-7/12">
