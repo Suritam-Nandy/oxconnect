@@ -5,7 +5,7 @@ const Input = (props) => {
     type = "text",
     placeholder = "placeholder text",
     name = "name",
-    value = "value",
+    value = "",
     onChange,
   } = props;
   return (

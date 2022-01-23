@@ -115,7 +115,7 @@ const Company = () => {
                         {job.title}
                       </h1>
                       <div className="flex flex-row items-center justify-around w-full text-lg p-1 mt-1.5">
-                        <p className="">location</p>
+                        <p className="">{job.location}</p>
                         <p>5 vacancy</p>
                         <p>we pay in crpto</p>
                       </div>

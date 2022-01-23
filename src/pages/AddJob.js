@@ -3,12 +3,14 @@ import { useParams, useHistory } from "react-router-dom";
 import { useFirestore, useFirebase } from "react-redux-firebase";
 
 import Input from "../components/layout/Input";
+import { useSelector } from "react-redux";
 const AddJob = () => {
   const firestore = useFirestore();
   const firebase = useFirebase();
   let history = useHistory();
   const { id } = useParams();
-  const uid = firebase.auth().currentUser.uid;
+  const uid = useSelector((state) => state.firebase.profile.uid);
+
   const docRef = id
     ? firestore.collection("users").doc(uid).collection("jobs").doc(id)
     : null;
@@ -17,8 +19,9 @@ const AddJob = () => {
     location: "",
     vacancy: "",
     payment: "",
-
+    userUid: "",
     description: "",
+    applicants: [],
   });
 
   // load job to edit
@@ -52,9 +55,11 @@ const AddJob = () => {
         await docRef
           .update({
             ...job,
+
             updatedAt: firestore.FieldValue.serverTimestamp(),
           })
-          .then(() => {
+          .then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
             firestore
               .collection("alljobs")
               .doc(docRef.id)
@@ -76,6 +81,7 @@ const AddJob = () => {
 
         .add({
           ...job,
+          userUid: uid,
           createdAt: firestore.FieldValue.serverTimestamp(),
         })
         .then((docRef) => {
@@ -85,6 +91,7 @@ const AddJob = () => {
             .doc(docRef.id)
             .set({
               ...job,
+              userUid: uid,
               createdAt: firestore.FieldValue.serverTimestamp(),
             });
         });

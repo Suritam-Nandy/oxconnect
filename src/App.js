@@ -32,7 +32,7 @@ function App() {
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/addjob" component={AddJob} />
             <Route exact path="/addjob/:id" component={AddJob} />
-            <Route exact path="/updateprofile" component={UpdateProfile} />
+            <Route exact path="/updateprofile/:id" component={UpdateProfile} />
 
             <Route exact path="/alljobs" component={AllJobs} />
 

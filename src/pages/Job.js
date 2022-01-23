@@ -10,20 +10,24 @@ const Job = () => {
   let history = useHistory();
 
   const { id } = useParams();
-  const { uid } = useSelector((state) => state.firebase.auth);
-
+  const uid = useSelector((state) => state.firebase.profile.uid);
+  const profile = useSelector((state) => state.firebase.profile);
   const role = useSelector((state) => state.firebase.profile.role);
-
+  const [applicants, setApplicant] = useState([]);
+  var userUid;
+  // const profile=useSelector((state) => state.firebase.profile
   const [job, setJob] = useState(null);
   useEffect(() => {
-    loadSpace();
+    loadJob();
   }, [job]);
-  const loadSpace = async () => {
+  const loadJob = async () => {
     try {
       const docRef = firestore.collection("alljobs").doc(id);
+
       const result = await docRef.get();
       if (result.exists) {
         setJob(result.data());
+        userUid = job.userUid;
       } else {
         console.log("No such document!");
       }
@@ -35,6 +39,9 @@ const Job = () => {
     return <Loading />;
   }
   const apply = () => {
+    const some = [...applicants, profile];
+    console.log(some);
+    setApplicant(some);
     firestore
       .collection("users")
       .doc(uid)
@@ -44,9 +51,23 @@ const Job = () => {
         ...job,
 
         createdAt: firestore.FieldValue.serverTimestamp(),
+      })
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+        firestore
+          .collection("users")
+          .doc(userUid)
+          .collection("jobs")
+          .doc(id)
+
+          .set({
+            ...applicants,
+            createdAt: firestore.FieldValue.serverTimestamp(),
+          });
+        console.log(applicants);
       });
 
-    history.replace("/dashboard");
+    history.replace("/companies");
   };
 
   return (
