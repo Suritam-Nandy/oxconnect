@@ -11,6 +11,7 @@ const Signup = (props) => {
   let history = useHistory();
   const firebase = useFirebase();
   const firestore = useFirestore();
+
   // const [docRole, setDocRole] = useState("");
   var role = props.location.role
     ? props.location.role
@@ -28,6 +29,7 @@ const Signup = (props) => {
     email: "",
     password: "",
     role: role,
+    uid: "",
   });
 
   const signInWithGoogle = () => {
@@ -63,6 +65,7 @@ const Signup = (props) => {
             displayName: user.displayName,
             email: user.email,
             role: role,
+            uid: resp.user.uid,
 
             createdAt: firestore.FieldValue.serverTimestamp(),
           })

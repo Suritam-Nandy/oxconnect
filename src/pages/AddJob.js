@@ -7,8 +7,8 @@ const AddJob = () => {
   const firestore = useFirestore();
   const firebase = useFirebase();
   let history = useHistory();
-  const uid = firebase.auth().currentUser.uid;
   const { id } = useParams();
+  const uid = firebase.auth().currentUser.uid;
   const docRef = id
     ? firestore.collection("users").doc(uid).collection("jobs").doc(id)
     : null;
