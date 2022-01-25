@@ -117,7 +117,7 @@ const UpdateProfile = () => {
                 type="submit"
                 className="bg-gray-800 text-gray-300 hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
-                {id ? "Update Job" : "Add Job"}
+                {"Update Profile"}
               </button>
             </div>
           </form>

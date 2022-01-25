@@ -14,20 +14,46 @@ const Job = () => {
   const profile = useSelector((state) => state.firebase.profile);
   const role = useSelector((state) => state.firebase.profile.role);
   const [applicants, setApplicant] = useState([]);
+  const [showApplicants, setShowApplicants] = useState(null);
+
   var userUid;
   // const profile=useSelector((state) => state.firebase.profile
   const [job, setJob] = useState(null);
   useEffect(() => {
     loadJob();
+    // if (profile && role === "Applicant") {
+    //   setApplicant([...applicants, profile]);
+    // }
+    getApplicants();
   }, [job]);
   const loadJob = async () => {
     try {
+      // console.log("load");
       const docRef = firestore.collection("alljobs").doc(id);
 
       const result = await docRef.get();
       if (result.exists) {
         setJob(result.data());
-        userUid = job.userUid;
+      } else {
+        console.log("No such document!");
+      }
+    } catch (error) {
+      console.log("Error getting document:", error);
+    }
+  };
+  const getApplicants = async () => {
+    try {
+      // console.log(id);
+      const docRef = firestore
+        .collection("users")
+        .doc(userUid)
+        .collection("jobs")
+        .doc(id);
+
+      const result = await docRef.get();
+      if (result.exists) {
+        // setShowApplicants(result.data());
+        setShowApplicants([...result.data().applicants]);
       } else {
         console.log("No such document!");
       }
@@ -37,31 +63,38 @@ const Job = () => {
   };
   if (job == null) {
     return <Loading />;
+  } else {
+    userUid = job.userUid;
+
+    // const jobApplicants = [applicants];
   }
+  // console.log(job);
   const apply = () => {
-    const some = [...applicants, profile];
-    console.log(some);
-    setApplicant(some);
+    // const some = [...applicants, profile];
+    // console.log(some);
+    // setApplicant(some)
+
     firestore
       .collection("users")
       .doc(uid)
-      .collection("jobs")
+      .collection("appliedJobs")
+      .doc(id)
 
-      .add({
+      .set({
         ...job,
 
         createdAt: firestore.FieldValue.serverTimestamp(),
       })
-      .then((docRef) => {
-        console.log("Document written with ID: ", docRef.id);
+      .then(() => {
+        console.log("Document written with ID: ", id);
         firestore
           .collection("users")
           .doc(userUid)
           .collection("jobs")
           .doc(id)
 
-          .set({
-            ...applicants,
+          .update({
+            applicants: [...applicants, profile],
             createdAt: firestore.FieldValue.serverTimestamp(),
           });
         console.log(applicants);
@@ -79,9 +112,17 @@ const Job = () => {
         Description: {job.description}
       </h1>
       {role === "User" && (
-        <Link to={`/addjob/${id}`} className="btn btn-primary btn-profile">
-          Edit
-        </Link>
+        <>
+          {showApplicants &&
+            showApplicants.map((applicant, index) => {
+              <>
+                <h1>{applicant.displayName}</h1>
+              </>;
+            })}
+          <Link to={`/addjob/${id}`} className="btn btn-primary btn-profile">
+            Edit
+          </Link>
+        </>
       )}
       {role === "Applicant" && (
         <button

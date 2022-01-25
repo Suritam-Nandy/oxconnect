@@ -52,17 +52,17 @@ const AddJob = () => {
     if (id) {
       // update user
       try {
-        await docRef
+        docRef
           .update({
             ...job,
 
             updatedAt: firestore.FieldValue.serverTimestamp(),
           })
-          .then((docRef) => {
-            console.log("Document written with ID: ", docRef.id);
+          .then(() => {
+            console.log("Document written with ID: ", id);
             firestore
               .collection("alljobs")
-              .doc(docRef.id)
+              .doc(id)
               .set({
                 ...job,
                 createdAt: firestore.FieldValue.serverTimestamp(),

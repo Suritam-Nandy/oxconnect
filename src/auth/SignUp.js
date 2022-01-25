@@ -29,7 +29,7 @@ const Signup = (props) => {
     email: "",
     password: "",
     role: role,
-    uid: "",
+    userUid: "",
   });
 
   const signInWithGoogle = () => {

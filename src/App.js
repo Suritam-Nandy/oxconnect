@@ -8,6 +8,8 @@ import Signup from "./auth/SignUp";
 import Login from "./auth/Login";
 import SignupPage from "./auth/SignupPage";
 import Dashboard from "./pages/Dashboard";
+import CompanyDashboard from "./pages/CompanyDashboard";
+
 import Companies from "./pages/Companies";
 import Company from "./pages/Company";
 import AddJob from "./pages/AddJob";
@@ -30,6 +32,12 @@ function App() {
 
             <Route exact path="/job/:id" component={Job} />
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route
+              exact
+              path="/companydashboard"
+              component={CompanyDashboard}
+            />
+
             <Route exact path="/addjob" component={AddJob} />
             <Route exact path="/addjob/:id" component={AddJob} />
             <Route exact path="/updateprofile/:id" component={UpdateProfile} />
