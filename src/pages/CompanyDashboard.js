@@ -22,10 +22,18 @@ const CompanyDashboard = () => {
               <h1 className="text-xl font-bold tracking-wide text-warmGray-800 ">
                 Applied
               </h1>
-              <div className="flex flex-row flex-wrap">
+              <div className="flex flex-row flex-wrap  mx-1 justify-evenly">
                 <Card />
                 <Card />
                 <Card />
+                <Card />
+              </div>
+            </div>
+            <div className="col-span-1 bg-blueGray-400">
+              <h1 className="text-xl font-bold tracking-wide text-warmGray-800">
+                Status
+              </h1>
+              <div className="flex flex-row flex-wrap  mx-1 justify-evenly">
                 <Card />
               </div>
             </div>
@@ -34,16 +42,7 @@ const CompanyDashboard = () => {
               <h1 className="text-xl font-bold tracking-wide text-warmGray-800">
                 Status
               </h1>
-              <div className="flex flex-row flex-wrap">
-                <Card />
-              </div>
-            </div>
-            <div className="col-span-1 bg-blueGray-400">
-              {" "}
-              <h1 className="text-xl font-bold tracking-wide text-warmGray-800">
-                Status
-              </h1>
-              <div className="flex flex-row flex-wrap">
+              <div className="flex flex-row flex-wrap  mx-1 justify-evenly">
                 <Card />
               </div>
             </div>
