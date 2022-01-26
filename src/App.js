@@ -9,6 +9,7 @@ import Login from "./auth/Login";
 import SignupPage from "./auth/SignupPage";
 import Dashboard from "./pages/Dashboard";
 import CompanyDashboard from "./pages/CompanyDashboard";
+import Appplicant from "./pages/Appplicant";
 
 import Companies from "./pages/Companies";
 import Company from "./pages/Company";
@@ -37,6 +38,7 @@ function App() {
               path="/companydashboard"
               component={CompanyDashboard}
             />
+            <Route exact path="/applicant/randomID" component={Appplicant} />
 
             <Route exact path="/addjob" component={AddJob} />
             <Route exact path="/addjob/:id" component={AddJob} />
