@@ -4,6 +4,7 @@ import { ReactReduxFirebaseProvider } from "react-redux-firebase";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Home from "./pages/Home";
+import Landing from "./pages/Landing";
 import Signup from "./auth/SignUp";
 import Login from "./auth/Login";
 import SignupPage from "./auth/SignupPage";
@@ -28,6 +29,8 @@ function App() {
           */}
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/landing" component={Landing} />
+
             <Route exact path="/companies" component={Companies} />
             <Route exact path="/company/:id" component={Company} />
 
