@@ -3,10 +3,10 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-      <div className="max-w-6xl mx-auto lg:px-2 mb-2 mt-32">
+      <div className="max-w-6xl mx-auto lg:px-2 mb-2 mt-10 md:mt-32">
         <div className="mb-4 p-4">
-          <div className="mb-4 p-2 grid grid-cols-2 gap-1">
-            <div className="flex flex-col justify-center mr-1">
+          <div className=" mb-4 p-2  grid grid-rows-1 md:grid-cols-2 gap-1">
+            <div className="flex flex-col justify-center mr-1 row-start-2 md:col-start-1 md:row-start-1">
               <h1 className="text-4xl font-semibold tracking-wide text-gray-600">
                 Connecting Applicants to the recruiters.
               </h1>
@@ -42,9 +42,9 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="flex justify-center  h-full">
-              <div className="h-80">
-                <img src="/Images/4565.jpg"></img>
+            <div className="   row-start-1 h-full md:col-start-2">
+              <div className="">
+                <img src="/Images/4565.jpg " className="" alt="hero" />
               </div>
             </div>
           </div>
