@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="   row-start-1 h-full md:col-start-2">
               <div className="mt-12">
                 <img
-                  src="/Images/4565.jpg "
+                  src="/Images/hero.jpeg "
                   className="h-96 w-full"
                   alt="hero"
                 />
