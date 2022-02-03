@@ -8,17 +8,13 @@ const Navbar = () => {
   return (
     <>
       {" "}
-      <header className="fixed w-full top-0 z-50 bg-gray-50 border-b md:flex md:items-center md:justify-around  px-3 pb-0 shadow-lg  md:px-5">
+      <header className="fixed w-full top-0 z-50 bg-gray-50 border-b md:flex md:items-center md:justify-around h-40 px-3 pb-0 shadow-lg  md:px-5">
         {/* <!-- Logo text or image --> */}
         <div className="flex items-center justify-between  md:mb-0">
           <div className="max-w-full h-auto flex justify-center items-center bg-gray-50">
             <NavLink to="/">
-              <h1
-                className="object-contain max-w-full h-12 md:h-20 my-1 w-auto"
-                src="/Images/mastercontractor-logo-01-navbar.png"
-                alt="logo"
-              >
-                0Xconnect
+              <h1 className="object-contain max-w-full text-gray-700 hover:text-black md:border-none md:p-0 md:text-5xl md:font-bold my-1 w-auto">
+                Connect.cv
               </h1>
             </NavLink>
           </div>
@@ -39,35 +35,35 @@ const Navbar = () => {
               open ? "block" : "hidden"
             } list-reset md:flex md:items-center md:justify-center `}
           >
-            <li className="md:ml-2">
+            <li className="md:ml-10">
               <a
-                className="block no-underline hover:underline py-2 text-gray-darkest hover:text-black md:border-none md:p-0 md:text-xl md:font-semibold"
+                className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base"
                 href="/"
               >
                 Home
               </a>
             </li>
-            <li className="md:ml-2">
+            <li className="md:ml-10">
               <a
-                className="block no-underline hover:underline py-2 text-gray-darkest hover:text-black md:border-none md:p-0 md:text-xl md:font-semibold"
+                className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base"
                 href="/about"
               >
-                About Us
+                Features
               </a>
             </li>
-            <li className="md:ml-2">
+            <li className="md:ml-10">
               <a
-                className="block no-underline hover:underline py-2 text-gray-darkest hover:text-black md:border-none md:p-0 md:text-xl md:font-semibold"
+                className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base"
                 href="/projects"
                 exact
               >
-                Team
+                Roadmap
               </a>
             </li>
-            <li className="md:ml-2">
-              <div className="block no-underline hover:underline py-2 text-gray-darkest hover:text-black md:border-none md:p-0 md:text-xl md:font-semibold">
+            <li className="md:ml-10">
+              <div className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base">
                 <a href="/services" exact>
-                  Services
+                  Team
                 </a>
               </div>
             </li>
