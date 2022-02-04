@@ -7,7 +7,9 @@ const Roadmap = () => {
         <h1 className="text-6xl font-bold tracking-tight text-black my-10">
           RoadMap
         </h1>
-        <div className="h-96 bg-blueGray-500">dfg</div>
+        <div className="h-full bg-blueGray-500">
+          <img src="./Images/rm.jfif"></img>
+        </div>
       </div>
       <div></div>
     </>
