@@ -10,7 +10,7 @@ const Hero = () => {
         id="/hero"
       >
         <div className=" p-2  grid grid-rows-1 md:grid-cols-2 gap-1">
-          <div className="flex flex-col justify-center mr-1 row-start-2 md:col-start-1 md:row-start-1">
+          <div className="flex flex-col justify-center p-1 mr-1 row-start-2 md:col-start-1 md:row-start-1">
             <Bounce>
               <h1 className="text-4xl font-semibold tracking-wide text-black cursor-default">
                 World's first
@@ -29,9 +29,9 @@ const Hero = () => {
                   We are the market-leading technical interview platform to
                   identify and hire developers wherever they are.
                 </p>
-                <div className="p-1 flex justify-between items-center">
+                <div className="p-1 pt-2 flex justify-between items-center">
                   <Fade up>
-                    <button className="text-xl bg-gray-800 text-gray-300 hover:text-white hover:border-2 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    <button className="text-xl bg-gray-800 text-gray-400 hover:text-white  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                       Create Profile
                     </button>
                   </Fade>
@@ -45,9 +45,9 @@ const Hero = () => {
                   We are the market-leading technical interview platform to
                   identify and hire developers wherever they are.
                 </p>
-                <div className="p-2 flex justify-between items-center ">
+                <div className="p-2  flex justify-between items-center ">
                   <Fade up>
-                    <button className=" text-xl border border-gray-700 text-gray-700 bg-white hover:text-black hover:border-black hover:border-2 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    <button className=" text-xl border   border-gray-500 text-gray-700 bg-white hover:text-black hover:border-black hover:border-double  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                       Sign up
                     </button>
                   </Fade>
@@ -56,7 +56,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="   row-start-1 h-full md:col-start-2">
+          <div className="   row-start-1 h-96 md:col-start-2">
             <div className="mt-4  ml-2 ">
               <img
                 src="/Images/4565.png "

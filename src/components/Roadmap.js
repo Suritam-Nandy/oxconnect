@@ -5,15 +5,15 @@ const Roadmap = () => {
   return (
     <>
       <div
-        className="max-w-6xl h-full flex flex-col justify-center items-center mx-auto lg:px-2 "
+        className="max-w-6xl h-full flex flex-col justify-center items-center mx-auto lg:px-2 mt-20 md:mt-0 "
         id="/roadmap"
       >
         <Fade up>
-          <h1 className="text-5xl font-base tracking-tightbg-black bg-black text-white rounded-md p-7 m-0 cursor-default">
+          <h1 className="text-4xl font-base tracking-tight bg-black text-white rounded-lg p-7 m-0 cursor-default">
             RoadMap
           </h1>
         </Fade>
-        <div className="h-full my-10">
+        <div className="h-full my-10 p-6">
           <img src="./Images/rdmp.png"></img>
         </div>
       </div>

@@ -9,7 +9,7 @@ const Team = () => {
         id="team"
       >
         <Fade up>
-          <h1 className="text-5xl font-base tracking-tightbg-black bg-black text-white rounded-md p-7 my-10 cursor-default">
+          <h1 className="text-4xl font-base tracking-tight bg-black text-white rounded-lg p-7 my-10 cursor-default">
             Team
           </h1>
         </Fade>
