@@ -3,7 +3,10 @@ import React from "react";
 const Team = () => {
   return (
     <>
-      <div className="max-w-6xl flex flex-col justify-center items-center mx-auto lg:px-2 mb-2  md:my-40">
+      <div
+        className="max-w-6xl flex flex-col justify-center items-center mx-auto lg:px-2 mb-2  md:mt-60 md:mb-8"
+        id="team"
+      >
         <h1 className="text-5xl font-base tracking-tightbg-black bg-black text-white rounded-md p-7 my-10 cursor-default">
           Team
         </h1>
@@ -29,7 +32,6 @@ const Team = () => {
           </div>
         </div>
       </div>
-      <div></div>
     </>
   );
 };

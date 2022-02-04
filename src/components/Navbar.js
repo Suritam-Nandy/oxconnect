@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { IoIosCall } from "react-icons/io";
 
@@ -12,11 +12,11 @@ const Navbar = () => {
         {/* <!-- Logo text or image --> */}
         <div className="flex items-center justify-between  md:mb-0">
           <div className="max-w-full h-auto flex justify-center items-center bg-gray-50">
-            <NavLink to="/">
-              <h1 className="object-contain max-w-full text-gray-700 hover:text-black md:border-none md:p-0 md:text-5xl md:font-bold my-1 w-auto">
+            <Link smooth duration={1500} to="/hero">
+              <h1 className="object-contain max-w-full text-gray-700 hover:text-black md:border-none md:p-0 md:text-5xl md:font-bold my-1 w-auto cursor-pointer">
                 Connect.cv
               </h1>
-            </NavLink>
+            </Link>
           </div>
           <div className="md:hidden flex-row flex">
             <button
@@ -36,35 +36,41 @@ const Navbar = () => {
             } list-reset md:flex md:items-center md:justify-center `}
           >
             <li className="md:ml-10">
-              <a
-                className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base"
-                href="/"
+              <Link
+                className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base cursor-pointer"
+                smooth
+                duration={1500}
+                to="/hero"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="md:ml-10">
-              <a
-                className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base"
-                href="/about"
+              <Link
+                className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base cursor-pointer"
+                smooth
+                duration={1500}
+                to="/features"
               >
                 Features
-              </a>
+              </Link>
             </li>
             <li className="md:ml-10">
-              <a
-                className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base"
-                href="/projects"
+              <Link
+                className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base cursor-pointer"
+                smooth
+                duration={1500}
+                to="/roadmap"
                 exact
               >
                 Roadmap
-              </a>
+              </Link>
             </li>
             <li className="md:ml-10">
-              <div className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base">
-                <a href="/services" exact>
+              <div className="block no-underline hover:underline py-2 text-gray-700 hover:text-black md:border-none md:p-0 md:text-2xl md:font-base cursor-pointer">
+                <Link smooth duration={1500} to="team">
                   Team
-                </a>
+                </Link>
               </div>
             </li>
           </ul>
