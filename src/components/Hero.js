@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className="max-w-6xl h-screen flex flex-col justify-center items-center mx-auto lg:px-2 mt-20   p-4 "
+        className="max-w-6xl h-screen flex flex-col justify-center items-center mx-auto lg:px-2 mt-8 md:mt-12   p-4 "
         id="/hero"
       >
         <div className=" p-2  grid grid-rows-1 md:grid-cols-2 gap-1">
@@ -56,8 +56,8 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="   row-start-1 h-96 md:col-start-2">
-            <div className="mt-4  ml-2 ">
+          <div className="   row-start-1 md:h-96 md:col-start-2">
+            <div className="mt-4 flex justify-center items-center  ml-2 ">
               <img
                 src="/Images/4565.png "
                 className="h-full w-full"

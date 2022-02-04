@@ -5,7 +5,7 @@ const Roadmap = () => {
   return (
     <>
       <div
-        className="max-w-6xl h-full flex flex-col justify-center items-center mx-auto lg:px-2 mt-20 md:mt-0 "
+        className="max-w-6xl h-full flex flex-col justify-center items-center mx-auto lg:px-2 mt-20 md:mt-52 "
         id="/roadmap"
       >
         <Fade up>
