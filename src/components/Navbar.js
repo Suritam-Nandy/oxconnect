@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       {" "}
-      <header className="fixed w-full top-0 z-50 bg-gray-50 border-b md:flex md:items-center md:justify-around h-40 px-3 pb-0 shadow-lg  md:px-5">
+      <header className="fixed w-full top-0 z-50 bg-gray-50 border-b md:flex md:items-center md:justify-around h-36 px-3 pb-0 shadow-lg  md:px-5">
         {/* <!-- Logo text or image --> */}
         <div className="flex items-center justify-between  md:mb-0">
           <div className="max-w-full h-auto flex justify-center items-center bg-gray-50">
