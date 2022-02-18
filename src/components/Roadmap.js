@@ -14,7 +14,7 @@ const Roadmap = () => {
           </h1>
         </Fade>
         <div className="h-full my-10 p-6">
-          <img src="./Images/rdmp.png"></img>
+          <img className="h-96" src="./Images/rdmp.png"></img>
         </div>
       </div>
     </>
