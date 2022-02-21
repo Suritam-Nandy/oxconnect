@@ -20,9 +20,9 @@ const UpdateProfile = () => {
   // const docRef = id ? firestore.collection("users").doc(id) : null;
   // // console.log(uid);
   const [profile, setProfile] = useState({
+    bio: "",
     displayName: "",
     email: "",
-    bio: "",
   });
   // //  profile to edit
   // useEffect(() => {
@@ -130,7 +130,7 @@ const UpdateProfile = () => {
                   />
                 </div>
                 <div className="w-full flex flex-row justify-between">
-                  <div className="flex flex-col m-1 w-full">
+                  <div className="flex flex-col m-1 w-60">
                     <h1 className="my-2 text-base">
                       Select your primary role
                       <label className="ml-1 text-lg text-gray-600">*</label>
@@ -143,26 +143,28 @@ const UpdateProfile = () => {
                     />
                   </div>
 
-                  <div className=" flex flex-col m-1 w-full">
-                    <h1 className="my-2 text-base">
+                  <div className=" flex flex-col m-1 w-56">
+                    {/* <div className="w-40"> */}
+                    <h1 className="my-2 text-base ">
                       Years of experience
                       <label className="ml-1 text-lg text-gray-600">*</label>
                     </h1>
                     <input
                       type="text"
                       list="exp-years"
-                      className="form-control w-16 md:w-20 xl:w-20 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      className="form-control w-16 md:w-40 xl:w-32 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       // placeholder={placeholder}
                       // name={name}
                       // value={value}
                       // onChange={onChange}
                     />
-                    <datalist id="exp-years" className="bg-white">
-                      <option className=""> 1 Year</option>
+                    <datalist id="exp-years" className="bg-white w-7">
+                      <option className=""> less than 1 Year</option>
                       <option>1 Year</option>
                       <option>2 Years</option>
                       <option>2+ Years</option>
                     </datalist>
+                    {/* </div> */}
                     {/* <Input
                       placeholder="Enter Name"
                       name="displayName"
@@ -170,6 +172,32 @@ const UpdateProfile = () => {
                       onChange={onInputChange}
                     /> */}
                   </div>
+                </div>
+                <div className="flex flex-col m-1 w-full">
+                  <h1 className="my-2  text-base">
+                    Open to the following roles
+                    <label className="ml-1 text-lg text-gray-600">*</label>
+                  </h1>
+                  <Input
+                    placeholder="Enter Name"
+                    name="displayName"
+                    value={profile.displayName}
+                    onChange={onInputChange}
+                  />
+                </div>
+                <div className="flex flex-col m-1 w-full">
+                  <h1 className="my-2  text-base">
+                    Your bio
+                    <label className="ml-1 text-lg text-gray-600">*</label>
+                  </h1>
+                  <textarea
+                    placeholder="Stanford CS, Full stack generalist; launched a successful Android app, worked at Google"
+                    name="bio"
+                    value={profile.bio}
+                    onChange={onInputChange}
+                    rows="6"
+                    className="mr-20 w-full shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  ></textarea>
                 </div>
               </div>
             </div>
