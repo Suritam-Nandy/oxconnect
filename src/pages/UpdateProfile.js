@@ -105,14 +105,71 @@ const UpdateProfile = () => {
                 </p>
               </div>
             </div>
-            <div className="w-8/12 items-start bg-green-400 p-2">
-              <h1 className="text-3xl tracking-tighter">Suritam Nandy</h1>
+            <div className="w-8/12 items-start p-2">
+              <h1 className="text-3xl tracking-tighter mb-4">Suritam Nandy</h1>
               <div>
-                <div className=" bg-emerald-300 flex flex-row items-center justify-start">
+                <div className=" flex flex-row items-center justify-start">
                   <img className="w-16 h-16" src="Images/1 (1).png"></img>
-                  <button className="mx-4 border border-gray-800 py-4 px-6">
+                  <button className="mx-4 border border-gray-600 py-2 px-3 rounded-md text-gray-600 font-medium text-sm hover:text-gray-900">
                     Upload new photo
                   </button>
+                </div>
+              </div>
+
+              <div className="w-full">
+                <div className="flex flex-col m-1 w-full">
+                  <h1 className="my-2  text-base">
+                    Where are you based?
+                    <label className="ml-1 text-lg text-gray-600">*</label>
+                  </h1>
+                  <Input
+                    placeholder="Enter Name"
+                    name="displayName"
+                    value={profile.displayName}
+                    onChange={onInputChange}
+                  />
+                </div>
+                <div className="w-full flex flex-row justify-between">
+                  <div className="flex flex-col m-1 w-full">
+                    <h1 className="my-2 text-base">
+                      Select your primary role
+                      <label className="ml-1 text-lg text-gray-600">*</label>
+                    </h1>
+                    <Input
+                      placeholder="Enter Name"
+                      name="displayName"
+                      value={profile.displayName}
+                      onChange={onInputChange}
+                    />
+                  </div>
+
+                  <div className=" flex flex-col m-1 w-full">
+                    <h1 className="my-2 text-base">
+                      Years of experience
+                      <label className="ml-1 text-lg text-gray-600">*</label>
+                    </h1>
+                    <input
+                      type="text"
+                      list="exp-years"
+                      className="form-control w-16 md:w-20 xl:w-20 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      // placeholder={placeholder}
+                      // name={name}
+                      // value={value}
+                      // onChange={onChange}
+                    />
+                    <datalist id="exp-years" className="bg-white">
+                      <option className=""> 1 Year</option>
+                      <option>1 Year</option>
+                      <option>2 Years</option>
+                      <option>2+ Years</option>
+                    </datalist>
+                    {/* <Input
+                      placeholder="Enter Name"
+                      name="displayName"
+                      value={profile.displayName}
+                      onChange={onInputChange}
+                    /> */}
+                  </div>
                 </div>
               </div>
             </div>
