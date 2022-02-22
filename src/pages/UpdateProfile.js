@@ -10,6 +10,11 @@ import {
 import ProfileAbout from "../components/ProfileAbout";
 import SocialProfile from "../components/SocialProfile";
 import ProfileWorkExp from "../components/ProfileWorkExp";
+import ProfileEducation from "../components/ProfileEducation";
+import ProfileSkills from "../components/ProfileSkills";
+import ProfileAchievements from "../components/ProfileAchievements";
+
+import ProfileIdentity from "../components/ProfileIdentity";
 
 import Input from "../components/layout/Input";
 
@@ -95,10 +100,14 @@ const UpdateProfile = () => {
             </div>
           </div>
         </div>
-        <div className="p-2  w-full h-full border border-gray-300 rounded-md">
+        <div className="p-2  w-full h-full border border-gray-300 rounded-md ">
           <ProfileAbout />
           <SocialProfile />
           <ProfileWorkExp />
+          <ProfileEducation />
+          <ProfileSkills />
+          <ProfileAchievements />
+          <ProfileIdentity />
         </div>
       </div>
     </>

@@ -23,7 +23,7 @@ const SocialProfile = () => {
         <div className="w-8/12 items-start p-2">
           <div className="w-full mb-10">
             <div className="flex flex-col m-1 my-3 w-full">
-              <h1 className="my-2  text-base">
+              <h1 className="my-2  text-lg">
                 Website
                 <label className="ml-1 text-lg text-gray-600">*</label>
               </h1>
@@ -35,7 +35,7 @@ const SocialProfile = () => {
               />
             </div>
             <div className="flex flex-col m-1 my-3 w-full">
-              <h1 className="my-2  text-base">
+              <h1 className="my-2  text-lg">
                 LinkedIn
                 <label className="ml-1 text-lg text-gray-600">*</label>
               </h1>
@@ -47,7 +47,7 @@ const SocialProfile = () => {
               />
             </div>
             <div className="flex flex-col m-1 my-3 w-full">
-              <h1 className="my-2  text-base">
+              <h1 className="my-2  text-lg">
                 GitHub
                 <label className="ml-1 text-lg text-gray-600">*</label>
               </h1>
@@ -59,7 +59,7 @@ const SocialProfile = () => {
               />
             </div>
             <div className="flex flex-col m-1 my-3 w-full">
-              <h1 className="my-2  text-base">
+              <h1 className="my-2  text-lg">
                 Twitter
                 <label className="ml-1 text-lg text-gray-600">*</label>
               </h1>

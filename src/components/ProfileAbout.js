@@ -35,7 +35,7 @@ const ProfileAbout = () => {
 
           <div className="w-full mb-10">
             <div className="flex flex-col m-1 my-3 w-full">
-              <h1 className="my-2  text-base">
+              <h1 className="my-2  text-lg">
                 Where are you based?
                 <label className="ml-1 text-lg text-gray-600">*</label>
               </h1>
@@ -48,7 +48,7 @@ const ProfileAbout = () => {
             </div>
             <div className="w-full flex flex-row justify-between">
               <div className="flex flex-col m-1 w-60">
-                <h1 className="my-2 text-base">
+                <h1 className="my-2 text-lg">
                   Select your primary role
                   <label className="ml-1 text-lg text-gray-600">*</label>
                 </h1>
@@ -62,7 +62,7 @@ const ProfileAbout = () => {
 
               <div className=" flex flex-col m-1 w-56">
                 {/* <div className="w-40"> */}
-                <h1 className="my-2 text-base ">
+                <h1 className="my-2 text-lg ">
                   Years of experience
                   <label className="ml-1 text-lg text-gray-600">*</label>
                 </h1>
@@ -91,7 +91,7 @@ const ProfileAbout = () => {
               </div>
             </div>
             <div className="flex flex-col m-1 my-3 w-full">
-              <h1 className="my-2  text-base">
+              <h1 className="my-2  text-lg">
                 Open to the following roles
                 <label className="ml-1 text-lg text-gray-600">*</label>
               </h1>
@@ -103,7 +103,7 @@ const ProfileAbout = () => {
               />
             </div>
             <div className="flex flex-col m-1 my-3 w-full">
-              <h1 className="my-2  text-base">
+              <h1 className="my-2  text-lg">
                 Your bio
                 <label className="ml-1 text-lg text-gray-600">*</label>
               </h1>
