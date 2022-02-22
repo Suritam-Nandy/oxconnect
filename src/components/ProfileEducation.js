@@ -37,7 +37,7 @@ const ProfileEducation = () => {
                 <h1 className="text-gray-600 font-medium">
                   Computer Science and Engineering, Bachelor's
                 </h1>
-                <p className="text-gray-600">2023</p>
+                <p className="text-gray-400">2023</p>
               </div>
             </div>
           </div>
