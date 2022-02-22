@@ -100,7 +100,7 @@ const UpdateProfile = () => {
             </div>
           </div>
         </div>
-        <div className="p-2  w-full h-full border border-gray-300 rounded-md ">
+        <div className="p-2  w-full h-full border border-gray-300 rounded-md cursor-default">
           <ProfileAbout />
           <SocialProfile />
           <ProfileWorkExp />

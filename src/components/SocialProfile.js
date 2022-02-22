@@ -13,7 +13,7 @@ const SocialProfile = () => {
   };
   return (
     <div id="social" className="  ">
-      <div className="flex flex-row justify-between  items-start border-b border-gray-300">
+      <div className="flex flex-row justify-between  items-start border-b border-gray-300 mx-2">
         <div className="w-4/12 items-start p-2 pr-28">
           <h1 className="text-black font-medium">Social Profiles</h1>
           <div>
