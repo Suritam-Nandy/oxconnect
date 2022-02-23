@@ -4,23 +4,50 @@ import Input from "./layout/Input";
 
 const ProfileWorkExp = () => {
   const [open, setOpen] = useState(true);
+  const [workList, setWorkList] = useState([
+    {
+      company: "         LiteStore",
+      title: "         Full Stack Developer",
+      startDate: "   Jul 2021 to Dec 2021     ",
+      endDate: "Jul 2021 to Dec 2021",
+      description:
+        "Worked as a Full Stack Developer and built the company's website which is their product as well, where people can lend and hire properties/places for temporary purpose. It is built with React.js Redux Firebase and Tailwind CSS technologies.",
+
+      website: "https://litestore.in/",
+    },
+  ]);
+
   const [work, setWork] = useState({
     company: "",
     title: "",
     startDate: "",
     endDate: "",
     description: "",
-    bio: "",
-    displayName: "",
-    email: "",
+
+    website: "",
   });
   const onInputChange = (e) => {
     setWork({ ...work, [e.target.name]: e.target.value });
   };
   const submitForm = async (e) => {
-    console.log("submitform");
     e.preventDefault();
+
+    console.log("submitform");
+    // const newList = workList ? [...[work]] : [...[workList], ...[work]];
+    setWorkList([...workList, ...[work]]);
+    console.log(workList);
+    setWork({
+      company: "",
+      title: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+
+      website: "",
+    });
   };
+  console.log(workList);
+
   return (
     <div id="workExp" className="  ">
       <div className="flex flex-row justify-between  items-start border-b border-gray-300 mx-2">
@@ -31,32 +58,28 @@ const ProfileWorkExp = () => {
           </div>
         </div>
         <div className="w-8/12 items-start p-1 ">
-          {work && (
-            <div className="w-11/12 mb-6 ">
-              <div className="flex flex-row m-1 my-3 w-full border border-gray-300 shadow-lg p-3">
-                <img
-                  src="/Images/nopic_startup.png"
-                  className="w-16 h-16 border mr-4"
-                />
-                <div>
-                  <h1 className="text-black font-medium">{work.company}</h1>
-                  <h1 className="text-gray-600 font-medium">
-                    <a href="https://litestore.in/" target="_blank">
-                      LiteStore
-                    </a>
-                  </h1>
-                  <p className="text-gray-400">Jul 2021 to Dec 2021</p>
-                  <p className="text-gray-900 mt-4">
-                    Worked as a Full Stack Developer and built the company's
-                    website which is their product as well, where people can
-                    lend and hire properties/places for temporary purpose. It is
-                    built with React.js Redux Firebase and Tailwind CSS
-                    technologies.
-                  </p>
+          {workList &&
+            workList.map((wk) => (
+              <div className="w-11/12 mb-6 ">
+                <div className="flex flex-row m-1 my-3 w-full border border-gray-300 shadow-lg p-3">
+                  <img
+                    src="/Images/nopic_startup.png"
+                    className="w-16 h-16 border mr-4"
+                  />
+                  <div>
+                    <h1 className="text-black font-medium">{wk.company}</h1>
+                    <h1 className="text-gray-600 font-medium">
+                      <a href="https://litestore.in/" target="_blank">
+                        {wk.title}
+                      </a>
+                    </h1>
+                    <p className="text-gray-400">{`${wk.startDate} to ${wk.startDate}`}</p>
+                    <p className="text-gray-900 mt-4">{wk.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            ))}
+
           {!open && (
             <>
               <h1
@@ -91,6 +114,18 @@ const ProfileWorkExp = () => {
                     placeholder="Title"
                     name="title"
                     value={work.title}
+                    onChange={onInputChange}
+                  />
+                </div>
+                <div className="flex flex-col m-1 my-3 w-full">
+                  <h1 className="my-2  text-lg">
+                    Website
+                    <label className="ml-1 text-lg text-gray-600">*</label>
+                  </h1>
+                  <Input
+                    placeholder="Website"
+                    name="website"
+                    value={work.website}
                     onChange={onInputChange}
                   />
                 </div>
@@ -156,7 +191,10 @@ const ProfileWorkExp = () => {
                   >
                     Cancel
                   </button>
-                  <button className="bg-gray-800 text-gray-200 hover:text-white font-bold py-1.5 px-5 rounded focus:outline-none focus:shadow-outline mx-2">
+                  <button
+                    type="submit"
+                    className="bg-gray-800 text-gray-200 hover:text-white font-bold py-1.5 px-5 rounded focus:outline-none focus:shadow-outline mx-2"
+                  >
                     Save
                   </button>
                 </div>
