@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
 import Input from "./layout/Input";
-
 const ProfileWorkExp = () => {
   const [open, setOpen] = useState(true);
   const [workList, setWorkList] = useState([
@@ -12,18 +10,15 @@ const ProfileWorkExp = () => {
       endDate: "Jul 2021 to Dec 2021",
       description:
         "Worked as a Full Stack Developer and built the company's website which is their product as well, where people can lend and hire properties/places for temporary purpose. It is built with React.js Redux Firebase and Tailwind CSS technologies.",
-
       website: "https://litestore.in/",
     },
   ]);
-
   const [work, setWork] = useState({
     company: "",
     title: "",
     startDate: "",
     endDate: "",
     description: "",
-
     website: "",
   });
   const onInputChange = (e) => {
@@ -32,22 +27,16 @@ const ProfileWorkExp = () => {
   const submitForm = async (e) => {
     e.preventDefault();
 
-    console.log("submitform");
-    // const newList = workList ? [...[work]] : [...[workList], ...[work]];
     setWorkList([...workList, ...[work]]);
-    console.log(workList);
     setWork({
       company: "",
       title: "",
       startDate: "",
       endDate: "",
       description: "",
-
       website: "",
     });
   };
-  console.log(workList);
-
   return (
     <div id="workExp" className="  ">
       <div className="flex flex-row justify-between  items-start border-b border-gray-300 mx-2">
@@ -167,23 +156,7 @@ const ProfileWorkExp = () => {
                     className="mr-20 w-full shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   ></textarea>
                 </div>
-                {/* <div className="flex flex-col m-1 my-3 w-full">
-              <input
-                type="text"
-                list="exp-years"
-                className="form-control  shadow appearance-none border rounded  py-4 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="This position is a..."
-                // name={name}
-                // value={value}
-                // onChange={onChange}
-              />
-              <datalist id="exp-years" className="bg-white w-7">
-                <option className=""> less than 1 Year</option>
-                <option>1 Year</option>
-                <option>2 Years</option>
-                <option>2+ Years</option>
-              </datalist>
-            </div> */}
+
                 <div className="flex flex-row justify-end m-1  my-3 w-full">
                   <button
                     onClick={() => setOpen(!open)}

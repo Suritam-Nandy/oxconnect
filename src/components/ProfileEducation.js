@@ -1,34 +1,29 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
 import Input from "./layout/Input";
-
 const ProfileEducation = () => {
   const [open, setOpen] = useState(false);
   const [educationList, setEducationList] = useState([
     {
       college: "Srm Institute Of Science And Technology",
-      graduation: "2023",
       degree: "Computer Science and Engineering, Bachelor's",
+      graduation: "2023",
     },
   ]);
-
   const [education, setEducation] = useState({
     college: "",
-    graduation: "",
     degree: "",
+    graduation: "",
   });
   const onInputChange = (e) => {
     setEducation({ ...education, [e.target.name]: e.target.value });
   };
   const submitForm = async (e) => {
     e.preventDefault();
-
-    // const newList = workList ? [...[education]] : [...[workList], ...[education]];
     setEducationList([...educationList, ...[education]]);
     setEducation({
       college: "",
-      graduation: "",
       degree: "",
+      graduation: "",
     });
     setOpen(!open);
   };
@@ -97,7 +92,7 @@ const ProfileEducation = () => {
                     <label className="ml-1 text-lg text-gray-600">*</label>
                   </h1>
                   <Input
-                    placeholder="Graduation"
+                    placeholder="Year"
                     name="graduation"
                     value={education.graduation}
                     onChange={onInputChange}
