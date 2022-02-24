@@ -4,9 +4,11 @@ import Input from "./layout/Input";
 
 const SocialProfile = () => {
   const [profile, setProfile] = useState({
-    bio: "",
-    displayName: "",
-    email: "",
+    website: "",
+    linkedIn: "",
+    gitHub: "",
+
+    twitter: "",
   });
   const onInputChange = (e) => {
     setProfile({ ...profile, [e.target.name]: e.target.value });
@@ -28,9 +30,9 @@ const SocialProfile = () => {
                 <label className="ml-1 text-lg text-gray-600">*</label>
               </h1>
               <Input
-                placeholder="Enter Name"
-                name="displayName"
-                value={profile.displayName}
+                placeholder="https://"
+                name="website"
+                value={profile.website}
                 onChange={onInputChange}
               />
             </div>
@@ -40,9 +42,9 @@ const SocialProfile = () => {
                 <label className="ml-1 text-lg text-gray-600">*</label>
               </h1>
               <Input
-                placeholder="Enter Name"
-                name="displayName"
-                value={profile.displayName}
+                placeholder="https://linkedin.com/username"
+                name="linkedIn"
+                value={profile.linkedIn}
                 onChange={onInputChange}
               />
             </div>
@@ -52,9 +54,9 @@ const SocialProfile = () => {
                 <label className="ml-1 text-lg text-gray-600">*</label>
               </h1>
               <Input
-                placeholder="Enter Name"
-                name="displayName"
-                value={profile.displayName}
+                placeholder="https://gitHub.com/username"
+                name="gitHub"
+                value={profile.gitHub}
                 onChange={onInputChange}
               />
             </div>
@@ -64,9 +66,9 @@ const SocialProfile = () => {
                 <label className="ml-1 text-lg text-gray-600">*</label>
               </h1>
               <Input
-                placeholder="Enter Name"
-                name="displayName"
-                value={profile.displayName}
+                placeholder="https://twitter.com/username"
+                name="twitter"
+                value={profile.twitter}
                 onChange={onInputChange}
               />
             </div>
