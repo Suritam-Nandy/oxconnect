@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from "react";
 import CreatableSelect from "react-select/creatable";
-import Select from "react-select";
 import Input from "./layout/Input";
 
 const ProfileSkills = () => {
