@@ -389,8 +389,8 @@ const ProfileAbout = () => {
   };
   return (
     <div id="about" className=" ">
-      <div className="flex flex-row justify-between  items-start border-b border-gray-300 mx-2">
-        <div className="w-4/12 items-start p-2 pr-28">
+      <div className="flex flex-col md:flex-row justify-between  items-start border-b border-gray-300 mx-2">
+        <div className="w-full md:w-4/12 items-start p-2 pr-28">
           <h1 className="text-black font-medium">About</h1>
           <div>
             <p className="text-gray-600">
@@ -398,26 +398,38 @@ const ProfileAbout = () => {
             </p>
           </div>
         </div>
-        <div className="w-8/12 items-start p-2">
+        <div className="w-full md:w-8/12 items-start p-2">
           <h1 className="text-3xl tracking-tighter mb-4">Suritam Nandy</h1>
           <div>
-            <div className=" flex flex-row items-center justify-start">
-              {files[0] ? (
-                <img className="w-40" src={URL.createObjectURL(files[0])} />
-              ) : (
+            {files[0] ? (
+              <div
+                className=" flex flex-col md:flex-row items-baseline  md:items-center justify-start
+              "
+              >
+                <img
+                  className="w-40 mr-2"
+                  src={URL.createObjectURL(files[0])}
+                />
+                <input
+                  type="file"
+                  className="custom-file-input m-2 md:ml-0 -ml-3 "
+                  onChange={(event) => {
+                    getPicture(event);
+                  }}
+                ></input>
+              </div>
+            ) : (
+              <div className=" flex flex-row items-center justify-start">
                 <img className="w-16 h-16" src="Images/1 (1).png"></img>
-              )}
-              <input
-                type="file"
-                className="custom-file-input "
-                onChange={(event) => {
-                  getPicture(event);
-                }}
-              ></input>
-              {/* <button className="mx-4 border border-gray-600 py-2 px-3 rounded-md text-gray-600 font-medium text-sm hover:text-gray-900">
-                Upload new photo
-              </button> */}
-            </div>
+                <input
+                  type="file"
+                  className="custom-file-input "
+                  onChange={(event) => {
+                    getPicture(event);
+                  }}
+                ></input>
+              </div>
+            )}
           </div>
 
           <div className="w-full mb-10">

@@ -13,8 +13,8 @@ const ProfileAchievements = () => {
   };
   return (
     <div id="skills" className="  ">
-      <div className="flex flex-row justify-between  items-start border-b border-gray-300 mx-2">
-        <div className="w-4/12 items-start p-2 pr-28">
+      <div className="flex flex-col md:flex-row justify-between  items-start border-b border-gray-300 mx-2">
+        <div className="w-full md:w-4/12 items-start p-2 pr-28">
           <h1 className="text-black font-medium">Achievements</h1>
           <div>
             <p className="text-gray-600">
@@ -22,7 +22,7 @@ const ProfileAchievements = () => {
             </p>
           </div>
         </div>
-        <div className="w-8/12 items-start p-2">
+        <div className="w-full md:w-8/12 items-start p-2">
           <div className="w-11/12 mb-6 ">
             <div className="flex flex-col m-1 my-3 w-full">
               <label className="my-2 mr-1 flex justify-end text-gray-400">

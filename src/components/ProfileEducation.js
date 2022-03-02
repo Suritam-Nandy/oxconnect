@@ -29,14 +29,14 @@ const ProfileEducation = () => {
   };
   return (
     <div id="education" className="  ">
-      <div className="flex flex-row justify-between  items-start border-b border-gray-300 mx-2">
-        <div className="w-4/12 items-start p-2 pr-28">
+      <div className="flex flex-col md:flex-row justify-between  items-start border-b border-gray-300 mx-2">
+        <div className="w-full md:w-4/12 items-start p-2 pr-28">
           <h1 className="text-black font-medium">Education</h1>
           <div>
             <p className="text-gray-600">What schools have you studied at?</p>
           </div>
         </div>
-        <div className="w-8/12 items-start p-2">
+        <div className="w-full md:w-8/12 items-start p-2">
           {educationList &&
             educationList.map((edu) => (
               <>

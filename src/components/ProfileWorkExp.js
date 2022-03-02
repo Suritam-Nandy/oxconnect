@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Input from "./layout/Input";
 const ProfileWorkExp = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [workList, setWorkList] = useState([
     {
       company: "         LiteStore",
@@ -39,14 +39,14 @@ const ProfileWorkExp = () => {
   };
   return (
     <div id="workExp" className="  ">
-      <div className="flex flex-row justify-between  items-start border-b border-gray-300 mx-2">
-        <div className="w-4/12 items-start p-2 pr-28">
+      <div className="flex flex-col md:flex-row justify-between  items-start border-b border-gray-300 mx-2">
+        <div className="w-full md:w-4/12 items-start p-2 pr-28">
           <h1 className="text-black font-medium">Your work experience</h1>
           <div>
             <p className="text-gray-600">What other positions have you held?</p>
           </div>
         </div>
-        <div className="w-8/12 items-start p-1 ">
+        <div className="w-full md:w-8/12 items-start p-1 ">
           {workList &&
             workList.map((wk) => (
               <div className="w-11/12 mb-6 ">

@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
+import CreatableSelect from "react-select/creatable";
 
 import Input from "./layout/Input";
-
+const handleChange = (inputValue: any, actionMeta: any) => {
+  console.group("Input Changed");
+  console.log(inputValue);
+  console.log(`action: ${actionMeta.action}`);
+  console.groupEnd();
+};
 const ProfileIdentity = () => {
   const [profile, setProfile] = useState({
     bio: "",
@@ -13,8 +19,8 @@ const ProfileIdentity = () => {
   };
   return (
     <div id="skills" className="  ">
-      <div className="flex flex-row justify-between  items-start border-b border-gray-300 mx-2">
-        <div className="w-4/12 items-start p-2 pr-28">
+      <div className="flex flex-col md:flex-row justify-between  items-start border-b border-gray-300 mx-2">
+        <div className="w-full md:w-4/12 items-start p-2 pr-28">
           <h1 className="text-black font-medium">Identity</h1>
           <div>
             <p className="text-gray-600 text-sm">
@@ -28,14 +34,21 @@ const ProfileIdentity = () => {
             </p>
           </div>
         </div>
-        <div className="w-8/12 items-start p-2">
+        <div className="w-full md:w-8/12 items-start p-2">
           <div className="w-11/12 mb-6 ">
             <div className="flex flex-col m-1 my-3 w-full">
               <h1 className="my-2 text-lg">Pronouns</h1>
-              <input
-                type="text"
-                className="form-control w-56 md:w-64 xl:w-full shadow appearance-none border rounded  py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              <CreatableSelect
                 placeholder="e.g. He / Him"
+                name="pronouns"
+                isClearable
+                onChange={handleChange}
+                options={[
+                  { value: "He-/-Him", label: "He / Him" },
+                  { value: "She-/-Her", label: "She / Her" },
+                  { value: "They-/-Them", label: "They / Them" },
+                  { value: "Prefer-not-to-say", label: "Prefer not to say" },
+                ]}
               />
             </div>
           </div>
@@ -43,10 +56,18 @@ const ProfileIdentity = () => {
           <div className="w-11/12 mb-6 ">
             <div className="flex flex-col m-1 my-3 w-full">
               <h1 className="my-2 text-lg">Gender Identity</h1>
-              <input
-                type="text"
-                className="form-control w-56 md:w-64 xl:w-full shadow appearance-none border rounded  py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="e.g. Man"
+
+              <CreatableSelect
+                placeholder="e.g. Woman"
+                name="pronouns"
+                isClearable
+                onChange={handleChange}
+                options={[
+                  { value: "Man", label: "Man" },
+                  { value: "Woman", label: "Woman" },
+                  { value: "Non binary", label: "Non binary" },
+                  { value: "Prefer-not-to-say", label: "Prefer not to say" },
+                ]}
               />
             </div>
           </div>
@@ -58,7 +79,7 @@ const ProfileIdentity = () => {
                   You can select multiple
                 </label>
               </h1>
-              <div className="flex flex-row justify-start items-center  text-gray-600 hover:text-gray-800 text-lg">
+              <div className="flex flex-row flex-wrap justify-start items-center  text-gray-600 hover:text-gray-800 text-lg">
                 <div className="w-max ">
                   <input
                     type="checkbox"
@@ -128,32 +149,32 @@ const ProfileIdentity = () => {
                   <label className="  text-black mx-1">Pacific Islander</label>
                 </div>
               </div>
-              <div className="flex flex-row justify-start items-center  text-gray-600 hover:text-gray-800 text-lg">
+              <div className="flex flex-row  justify-start items-start  text-gray-600 hover:text-gray-800 text-lg">
                 <div className="w-max ">
                   <input
                     type="checkbox"
                     className="text-gray-800   h-3 w-3 mx-1 "
                     name="Black / African-American"
                   />
-                  <label className="  text-black mx-1">
-                    South Asian (including Bangladeshi, Bhutanese, Indian,
-                    Nepali, Pakistani, and Sri Lankan)
-                  </label>
                 </div>
+                <label className="  text-black mx-1">
+                  South Asian (including Bangladeshi, Bhutanese, Indian, Nepali,
+                  Pakistani, and Sri Lankan)
+                </label>
               </div>
-              <div className="flex flex-row justify-start items-center  text-gray-600 hover:text-gray-800 text-lg">
-                <div className="w-max ">
+              <div className="flex flex-row justify-start items-start   text-gray-600 hover:text-gray-800 text-lg">
+                <div className="w-max">
                   <input
                     type="checkbox"
                     className="text-gray-800   h-3 w-3 mx-1 "
                     name="Black / African-American"
                   />
-                  <label className="  text-black mx-1">
-                    Southeast Asian (including Burmese, Cambodian, Filipino,
-                    Hmong, Indonesian, Laotian, Malaysian, Mien, Singaporean,
-                    Thai, and Vietnamese)
-                  </label>
                 </div>
+                <label className="  text-black mx-1">
+                  Southeast Asian (including Burmese, Cambodian, Filipino,
+                  Hmong, Indonesian, Laotian, Malaysian, Mien, Singaporean,
+                  Thai, and Vietnamese)
+                </label>
               </div>
               <div className="flex flex-row justify-start items-center  text-gray-600 hover:text-gray-800 text-lg">
                 <div className="w-max ">
