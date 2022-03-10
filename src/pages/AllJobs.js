@@ -94,7 +94,7 @@ const AllJobs = () => {
                           Full-time
                         </p>
                         <p className="px-1 py-0.5 mr-2.5 text-sm border border-gray-700 rounded">
-                          we pay in crpto
+                          location
                         </p>
                       </div>
                     </div>
