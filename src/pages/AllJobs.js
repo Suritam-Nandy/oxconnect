@@ -88,10 +88,10 @@ const AllJobs = () => {
 
                       <div className="flex flex-row items-center justify-start w-full text-lg p-1 mt-1.5">
                         <p className="px-1 py-0.5 mr-2.5 text-sm border border-gray-700 rounded">
-                          location
+                          Not yet published
                         </p>
                         <p className="px-1 py-0.5 mr-2.5 text-sm border border-gray-700 rounded">
-                          5 vacancy
+                          Full-time
                         </p>
                         <p className="px-1 py-0.5 mr-2.5 text-sm border border-gray-700 rounded">
                           we pay in crpto
