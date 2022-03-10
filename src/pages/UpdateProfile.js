@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Fade from "react-reveal/Fade";
 
 import ProfileAbout from "../components/ProfileAbout";
 import SocialProfile from "../components/SocialProfile";
@@ -48,16 +49,22 @@ const UpdateProfile = () => {
           </div>
         </div>
         {status === "Resume" ? (
-          <Resume />
+          <div className="p-2  w-full h-full border border-gray-300 rounded-md cursor-default">
+            {/* <Fade up> */}
+            <Resume />
+            {/* </Fade> */}
+          </div>
         ) : status === "Profile" ? (
           <div className="p-2  w-full h-full border border-gray-300 rounded-md cursor-default">
-            <ProfileAbout />
-            <SocialProfile />
-            <ProfileWorkExp />
-            <ProfileEducation />
-            <ProfileSkills />
-            <ProfileAchievements />
-            <ProfileIdentity />
+            <Fade up>
+              <ProfileAbout />
+              <SocialProfile />
+              <ProfileWorkExp />
+              <ProfileEducation />
+              <ProfileSkills />
+              <ProfileAchievements />
+              <ProfileIdentity />
+            </Fade>
           </div>
         ) : (
           <></>
