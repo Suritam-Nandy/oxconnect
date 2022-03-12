@@ -14,14 +14,11 @@ import Input from "../components/layout/Input";
 
 import Resume from "./Resume";
 const UpdateProfile = () => {
-  const [resu, setResu] = useState(false);
-  const [pro, setPro] = useState(true);
   const [status, setStatus] = useState("Profile");
 
   const onInputChange = (status) => {
     setStatus(status);
   };
-  console.log(resu);
   return (
     <>
       <div className="max-w-5xl flex flex-col justify-center items-center mx-auto lg:px-2 mb-2 cursor-default">
