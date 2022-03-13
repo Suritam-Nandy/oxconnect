@@ -116,7 +116,10 @@ const AllJobs = () => {
                             <Tooltip label="Job setup">
                               <MenuButton>
                                 {" "}
-                                <FiSettings className="w-4 h-4 mx-1" />
+                                <Link to="/jobsetup">
+                                  {" "}
+                                  <FiSettings className="w-4 h-4 mx-1" />
+                                </Link>
                               </MenuButton>
                             </Tooltip>
                           </Menu>

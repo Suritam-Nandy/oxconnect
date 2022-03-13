@@ -16,7 +16,7 @@ const HiringTeam = () => {
     setjob({ ...job, [e.target.name]: e.target.value });
   };
   return (
-    <div className="w-9/12 text-lg p-2 mx-2 ">
+    <div className=" w-9/12 text-lg p-2 mx-2 pb-36">
       <h1 className="text-2xl font-bold my-2 mb-3">Hiring team</h1>
       <p className=" text-base">
         Members who are assigned as part of the hiring team gain access to the
