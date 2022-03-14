@@ -34,7 +34,7 @@ const ProfileAchievements = () => {
                 value={profile.bio}
                 onChange={onInputChange}
                 rows="10"
-                className="mr-20 w-full shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="mr-20 w-full shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-snug focus:outline-none focus:shadow-outline"
               ></textarea>
             </div>
           </div>

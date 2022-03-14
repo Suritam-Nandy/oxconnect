@@ -16,14 +16,14 @@ const HiringTeam = () => {
     setjob({ ...job, [e.target.name]: e.target.value });
   };
   return (
-    <div className=" w-9/12 text-lg p-2 mx-2 pb-36">
+    <div className=" w-full text-lg p-2 mx-2 pb-36">
       <h1 className="text-2xl font-bold my-2 mb-3">Hiring team</h1>
       <p className=" text-base">
         Members who are assigned as part of the hiring team gain access to the
         job. They can interact with candidates and update the job settings.
       </p>
       <div className="mt-10">
-        <div className="flex flex-row justify-between items-center m-1 my-5 wgray-100  bg-gray-200  p-2.5 px-4 rounded-md">
+        <div className="flex flex-row justify-between items-center m-1 my-5  bg-gray-200  p-2.5 px-4 rounded-md">
           <div className="flex flex-row justify-start items-start">
             <div className="rounded  bg-gray-500 w-10 h-10"></div>
             <div className="mx-2.5 ">

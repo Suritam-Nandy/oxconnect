@@ -22,7 +22,7 @@ const JobDetails = () => {
     setjob({ ...job, [e.target.name]: e.target.value });
   };
   return (
-    <div className=" w-9/12 text-lg p-2 mx-2 pb-36">
+    <div className=" w-full text-lg p-2 mx-2 pb-36">
       <h1 className="text-2xl font-bold my-2 mb-3">Job details</h1>
       <p className=" text-base">
         Here's where you can edit the general information for this job. This
@@ -49,7 +49,7 @@ const JobDetails = () => {
             <label className="ml-1 text-lg text-gray-600">*</label>
           </h1>
           <CreatableSelect
-            className="form-control w-56 md:w-64 xl:w-96 shadow text-gray-700 leading-tight "
+            className="form-control w-56 md:w-64 xl:w-96 shadow text-gray-700 leading-snug "
             placeholder="e.g. Sales"
             name="pronouns"
             isClearable
@@ -72,7 +72,7 @@ const JobDetails = () => {
             <label className="ml-1 text-lg text-gray-600">*</label>
           </h1>
           <CreatableSelect
-            className="form-control w-56 md:w-64 xl:w-96 shadow text-gray-700 leading-tight "
+            className="form-control w-56 md:w-64 xl:w-96 shadow text-gray-700 leading-snug "
             placeholder="e.g. Full Time"
             name="pronouns"
             isClearable
@@ -128,7 +128,7 @@ const JobDetails = () => {
             <label className="ml-1 text-lg text-gray-600">*</label>
           </h1>
           <CreatableSelect
-            className="form-control w-56 md:w-64 xl:w-96 shadow text-gray-700 leading-tight "
+            className="form-control w-56 md:w-64 xl:w-96 shadow text-gray-700 leading-snug "
             placeholder="e.g. No remote"
             name="pronouns"
             isClearable
@@ -151,7 +151,7 @@ const JobDetails = () => {
             <label className="ml-1 text-lg text-gray-600">*</label>
           </h1>
           <CreatableSelect
-            className="form-control w-56 md:w-64 xl:w-96 shadow text-gray-700 leading-tight "
+            className="form-control w-56 md:w-64 xl:w-96 shadow text-gray-700 leading-snug "
             placeholder="e.g. Not shown"
             name="pronouns"
             isClearable

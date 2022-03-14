@@ -44,11 +44,6 @@ const ProfileSkills = () => {
               isMulti
               onChange={handleChange}
             />
-            {/* <input
-              type="text"
-              className="form-control w-56 md:w-64 xl:w-full shadow appearance-none border rounded  py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="e.g. Pythonc React"
-            /> */}
           </div>
         </div>
       </div>

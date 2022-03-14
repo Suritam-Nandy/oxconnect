@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Input from "../components/layout/Input";
 import JobDetails from "../components/JobDetails";
 import HiringTeam from "../components/HiringTeam";
+import HiringStages from "../components/HiringStages";
+import ApplicationForm from "../components/ApplicationForm";
 import { FiChevronRight } from "react-icons/fi";
 import { AiOutlineInbox } from "react-icons/ai";
 
@@ -71,7 +73,7 @@ const JobSetup = () => {
                 <label className="text-base">0</label>
               </div>
             </div>
-            <div className="w-3/12 text-base  border-r p-1 ">
+            <div className="w-3/12 text-base  border-r p-1 cursor-pointer ">
               <div
                 onClick={() => onInputChange("JobDetails")}
                 className="flex flex-row justify-between items-center my-2 text-black hover:text-black hover:bg-gray-200 px-2 rounded"
@@ -84,12 +86,18 @@ const JobSetup = () => {
 
                 <FiChevronRight className=" " />
               </div>
-              <div className="flex flex-row justify-between items-center my-2 text-gray-600 hover:text-black hover:bg-gray-200 px-2 rounded">
+              <div
+                onClick={() => onInputChange("ApplicationForm")}
+                className="flex flex-row justify-between items-center my-2 text-gray-600 hover:text-black hover:bg-gray-200 px-2 rounded"
+              >
                 <h1 className=" font-semibold"> Application form</h1>
 
                 <FiChevronRight className=" " />
               </div>
-              <div className="flex flex-row justify-between items-center my-2 text-gray-600 hover:text-black hover:bg-gray-200 px-2 rounded">
+              <div
+                onClick={() => onInputChange("HiringStages")}
+                className="cursor-pointer flex flex-row justify-between items-center my-2 text-gray-600 hover:text-black hover:bg-gray-200 px-2 rounded"
+              >
                 <h1 className=" font-semibold">Hiring Stages</h1>
 
                 <FiChevronRight className=" " />
@@ -105,13 +113,20 @@ const JobSetup = () => {
               </div>
             </div>
 
-            {status === "JobDetails" ? (
-              <JobDetails />
-            ) : status === "HiringTeam" ? (
-              <HiringTeam />
-            ) : (
-              <></>
-            )}
+            <div className="w-9/12">
+              {" "}
+              {status === "JobDetails" ? (
+                <JobDetails />
+              ) : status === "HiringTeam" ? (
+                <HiringTeam />
+              ) : status === "HiringStages" ? (
+                <HiringStages />
+              ) : status === "ApplicationForm" ? (
+                <ApplicationForm />
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
         </div>
       </div>

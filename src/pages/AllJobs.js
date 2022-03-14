@@ -90,7 +90,13 @@ const AllJobs = () => {
                 </ModalBody>
                 <ModalFooter>
                   <button
-                    className="bg-gray-600 text-gray-200 hover:text-white font-bold py-1 px-4 rounded-md focus:outline-none focus:shadow-outline"
+                    className="bg-gray-600 text-gray-200 hover:text-white font-bold py-0.5 px-4 rounded-md focus:outline-none focus:shadow-outline mr-5"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Create job
+                  </button>
+                  <button
+                    className="bg-gray-600 text-gray-200 hover:text-white font-bold py-0.5 px-4 rounded-md focus:outline-none focus:shadow-outline"
                     onClick={() => setShowModal(false)}
                   >
                     Close
