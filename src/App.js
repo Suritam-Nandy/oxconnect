@@ -18,6 +18,7 @@ import AddJob from "./pages/AddJob";
 import UpdateProfile from "./pages/UpdateProfile";
 import AllJobs from "./pages/AllJobs";
 import JobSetup from "./pages/JobSetup";
+import AccountSettings from "./pages/AccountSettings";
 
 import Job from "./pages/Job";
 function App() {
@@ -52,6 +53,7 @@ function App() {
 
             <Route exact path="/alljobs" component={AllJobs} />
             <Route exact path="/jobsetup" component={JobSetup} />
+            <Route exact path="/accountsettings" component={AccountSettings} />
 
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup/:role" component={Signup} />
