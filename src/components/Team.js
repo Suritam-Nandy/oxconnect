@@ -27,7 +27,7 @@ const Team = () => {
                 src="/Images/team1.jpg"
               ></img>
             </div>
-            <div className="w-40 h-40  m-2 flex drop-shadow-2xl justify-center items-center">
+            {/* <div className="w-40 h-40  m-2 flex drop-shadow-2xl justify-center items-center">
               <img
                 className="rounded-full drop-shadow-2xl"
                 src="/Images/team1.jpg"
@@ -46,7 +46,7 @@ const Team = () => {
                 className="rounded-full drop-shadow-2xl"
                 src="/Images/team1.jpg"
               ></img>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

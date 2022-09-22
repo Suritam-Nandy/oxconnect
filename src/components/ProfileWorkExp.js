@@ -1,7 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams, useHistory } from "react-router-dom";
+import { useFirestore, useFirebase } from "react-redux-firebase";
+import { useSelector } from "react-redux";
+
 import Input from "./layout/Input";
 const ProfileWorkExp = () => {
+  const firestore = useFirestore();
+  const { id } = useParams();
+  const uid = useSelector((state) => state.firebase.auth.uid);
+  const docRef = id ? firestore.collection("users").doc(uid) : null;
   const [open, setOpen] = useState(false);
+
   const [workList, setWorkList] = useState([
     {
       company: "         LiteStore",
@@ -28,6 +37,7 @@ const ProfileWorkExp = () => {
     e.preventDefault();
 
     setWorkList([...workList, ...[work]]);
+    // setApplicantProfile([...applicantProfile, ...[work]]);
     setWork({
       company: "",
       title: "",
@@ -36,6 +46,20 @@ const ProfileWorkExp = () => {
       description: "",
       website: "",
     });
+
+    if (id) {
+      // update user
+      try {
+        docRef.update({
+          applicantProfile: { wrk: [...[work]] },
+          createdAt: firestore.FieldValue.serverTimestamp(),
+        });
+
+        console.log("Document successfully updated!");
+      } catch (error) {
+        console.error("Error updating document: ", error);
+      }
+    }
   };
   return (
     <div id="workExp" className="  ">

@@ -9,7 +9,7 @@ const AddJob = () => {
   const firebase = useFirebase();
   let history = useHistory();
   const { id } = useParams();
-  const uid = useSelector((state) => state.firebase.profile.uid);
+  const uid = useSelector((state) => state.firebase.auth.uid);
 
   const docRef = id
     ? firestore.collection("users").doc(uid).collection("jobs").doc(id)

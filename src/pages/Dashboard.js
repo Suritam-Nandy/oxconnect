@@ -5,7 +5,7 @@ import { useFirebase } from "react-redux-firebase";
 import Loading from "../components/layout/Loading";
 
 const Dashboard = () => {
-  const uid = useSelector((state) => state.firebase.profile.uid);
+  const uid = useSelector((state) => state.firebase.auth.uid);
   const role = useSelector((state) => state.firebase.profile.role);
 
   if (!uid) {

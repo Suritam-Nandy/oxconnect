@@ -11,6 +11,7 @@ import ProfileAchievements from "../components/ProfileAchievements";
 import ProfileIdentity from "../components/ProfileIdentity";
 
 import Input from "../components/layout/Input";
+import Overview from "./Overview";
 
 import Resume from "./Resume";
 const UpdateProfile = () => {
@@ -26,6 +27,14 @@ const UpdateProfile = () => {
           <div className="w-full px-2 flex flex-col ">
             <h1 className="text-4xl my-6">Edit your profile</h1>
             <div className="my-8 flex flex-row justify-start items-center border-b border-gray-200">
+              <div className=" px-3 py-2 mx-4 text-xl text-gray-600 font-medium hover:text-black w-20">
+                <h1
+                  onClick={() => onInputChange("Overview")}
+                  className="cursor-pointer"
+                >
+                  Overview
+                </h1>
+              </div>
               <div className=" px-3 py-2 mx-4 text-xl text-gray-600 font-medium hover:text-black w-20">
                 <h1
                   onClick={() => onInputChange("Profile")}
@@ -45,7 +54,13 @@ const UpdateProfile = () => {
             </div>
           </div>
         </div>
-        {status === "Resume" ? (
+        {status === "Overview" ? (
+          <div className="p-2  w-full h-full border border-gray-300 rounded-md cursor-default">
+            {/* <Fade up> */}
+            <Overview />
+            {/* </Fade> */}
+          </div>
+        ) : status === "Resume" ? (
           <div className="p-2  w-full h-full border border-gray-300 rounded-md cursor-default">
             {/* <Fade up> */}
             <Resume />

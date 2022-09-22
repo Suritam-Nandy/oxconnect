@@ -409,6 +409,7 @@ const ProfileAbout = () => {
                 <img
                   className="w-40 mr-2"
                   src={URL.createObjectURL(files[0])}
+                  alt="i"
                 />
                 <input
                   type="file"

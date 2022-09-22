@@ -29,7 +29,9 @@ const Login = () => {
           role: role,
           createdAt: firestore.FieldValue.serverTimestamp(),
         });
-        history.push("/dashboard");
+      })
+      .then(() => {
+        history.replace("/dashboard");
       });
   };
 
@@ -116,7 +118,7 @@ const Login = () => {
                         pathname: "/signup",
                         role: "User",
                       }}
-                      className="dropdown-item text-blueGray-500 hover:text-blueGray-600 font-bold"
+                      className="dropdown-item text-blueGray-500 hover:text-blueGray-600 font-bold mr-4"
                     >
                       Sign up as User
                     </Link>

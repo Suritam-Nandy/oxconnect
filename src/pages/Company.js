@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link, useHistory } from "react-router-dom";
+import { useParams, Link, useHistory, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Menu } from "react-feather";
+
 import { useFirestoreConnect, useFirestore } from "react-redux-firebase";
 import {
   HiOutlineLocationMarker,
@@ -9,6 +11,8 @@ import {
 } from "react-icons/hi";
 import Loading from "../components/layout/Loading";
 const Company = () => {
+  const [open, setOpen] = useState(false);
+
   // const firebase = useFirebase();
   const firestore = useFirestore();
 

@@ -14,7 +14,7 @@ const Navbar = () => {
           <div className="max-w-full h-auto flex justify-center items-center bg-gray-50">
             <Link smooth duration={1500} to="/hero">
               <h1 className="object-contain max-w-full text-gray-700 hover:text-black md:border-none md:p-0 text-3xl md:text-5xl md:font-bold my-1 w-auto cursor-pointer">
-                Connect.cv
+                0xconnect
               </h1>
             </Link>
           </div>
