@@ -111,7 +111,6 @@ const Overview = () => {
                 </>
               ))}
           </div>
-
           <div>
             <p className="text-sm text-gray-600  my-1">Education</p>
             <div
