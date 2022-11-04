@@ -64,7 +64,9 @@ const Company = () => {
           <h1 className="text-3xl font-bold tracking-wide text-warmGray-800">
             {company.displayName}
           </h1>
-          <h1 className="text-2xl  text-black">some tagline</h1>
+          <h1 className="text-2xl  text-black">
+            Building better communication
+          </h1>
         </div>
         <div className=" flex flex-row justify-start mb-16 p-2 text-xl">
           <div className="mr-10 flex flex-row ">
@@ -120,7 +122,7 @@ const Company = () => {
                       </h1>
                       <div className="flex flex-row items-center justify-around w-full text-lg p-1 mt-1.5">
                         <p className="">{job.location}</p>
-                        <p>5 vacancy</p>
+                        <p>{}</p>
                         <p>we pay in crpto</p>
                       </div>
                     </div>
