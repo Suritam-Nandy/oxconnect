@@ -43,6 +43,7 @@ const Overview = () => {
   // if (!companies) {
   //   return <Loading />;
   // }
+  console.log(wrk);
   return (
     <div id="overview" className=" ">
       <div className="flex flex-col md:flex-row justify-between  items-start border-b border-gray-300 mx-2">
@@ -87,29 +88,28 @@ const Overview = () => {
           </div>
           <div>
             <p className="text-sm text-gray-600  my-1">Experience</p>
-            <div className="flex flex-row m-1 my-3  p-3">
-              <img
-                src="/Images/nopic_startup.png"
-                className="w-16 h-16 border mr-4"
-              />
-              <div>
-                <h1 className="text-black font-medium">LiteStore</h1>
-                <h1 className="text-gray-600 font-medium">
-                  <a href="https://litestore.in/" target="_blank">
-                    {wrk[0].title}
-                  </a>
-                </h1>
-                <p className="text-gray-400">
-                  Jul 2021 to Dec 2021 to Jul 2021 to Dec 2021
-                </p>
-                <p className="text-gray-900 mt-1">
-                  Worked as a Full Stack Developer and built the company's
-                  website which is their product as well, where people can lend
-                  and hire properties/places for temporary purpose. It is built
-                  with React.js Redux Firebase and Tailwind CSS technologies.
-                </p>
-              </div>
-            </div>
+            {wrk &&
+              wrk.map((wk) => (
+                <>
+                  {" "}
+                  <div className="flex flex-row m-1 my-3  p-3">
+                    <img
+                      src="/Images/nopic_startup.png"
+                      className="w-16 h-16 border mr-4"
+                    />
+                    <div>
+                      <h1 className="text-black font-medium">{wk.company} </h1>
+                      <h1 className="text-gray-600 font-medium">
+                        <a href="https://litestore.in/" target="_blank">
+                          {wk.title}
+                        </a>
+                      </h1>
+                      <p className="text-gray-400">Jul 2021 to Dec 2021</p>
+                      <p className="text-gray-900 mt-1">{wk.description}</p>
+                    </div>
+                  </div>
+                </>
+              ))}
           </div>
 
           <div>

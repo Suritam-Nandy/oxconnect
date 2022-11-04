@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useFirestore, useFirebase } from "react-redux-firebase";
 import { useSelector } from "react-redux";
+import { useFirebaseConnect } from "react-redux-firebase";
 
 import Input from "./layout/Input";
+import Loading from "../components/layout/Loading";
+
 const ProfileWorkExp = () => {
   const firestore = useFirestore();
   const { id } = useParams();
@@ -33,6 +36,11 @@ const ProfileWorkExp = () => {
   const onInputChange = (e) => {
     setWork({ ...work, [e.target.name]: e.target.value });
   };
+  // useFirebaseConnect("user/${uid}/profile/applicantProfile/wrk");
+
+  const wrk = useSelector(
+    (state) => state.firebase.profile.applicantProfile.wrk
+  );
   const submitForm = async (e) => {
     e.preventDefault();
 
@@ -51,7 +59,7 @@ const ProfileWorkExp = () => {
       // update user
       try {
         docRef.update({
-          applicantProfile: { wrk: [...[work]] },
+          applicantProfile: { wrk: [...wrk, ...[work]] },
           createdAt: firestore.FieldValue.serverTimestamp(),
         });
 
@@ -61,6 +69,9 @@ const ProfileWorkExp = () => {
       }
     }
   };
+  if (!wrk) {
+    return <Loading />;
+  }
   return (
     <div id="workExp" className="  ">
       <div className="flex flex-col md:flex-row justify-between  items-start border-b border-gray-300 mx-2">
@@ -71,8 +82,8 @@ const ProfileWorkExp = () => {
           </div>
         </div>
         <div className="w-full md:w-8/12 items-start p-1 ">
-          {workList &&
-            workList.map((wk) => (
+          {wrk &&
+            wrk.map((wk) => (
               <div className="w-11/12 mb-6 ">
                 <div className="flex flex-row m-1 my-3 w-full border border-gray-300 shadow-lg p-3">
                   <img

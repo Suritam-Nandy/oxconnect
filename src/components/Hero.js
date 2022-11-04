@@ -30,11 +30,11 @@ const Hero = () => {
                   identify and hire developers wherever they are.
                 </p>
                 <div className="p-1 pt-2 flex justify-between items-center">
-                  <Fade up>
+                  {/* <Fade up>
                     <button className="text-xl bg-gray-800 text-gray-400 hover:text-white  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                       Create Profile
                     </button>
-                  </Fade>
+                  </Fade> */}
                 </div>
               </div>
               <div className="mr-4 p-2">
@@ -46,11 +46,11 @@ const Hero = () => {
                   identify and hire developers wherever they are.
                 </p>
                 <div className="p-2  flex justify-between items-center ">
-                  <Fade up>
+                  {/* <Fade up>
                     <button className=" text-xl border   border-gray-500 text-gray-700 bg-white hover:text-black hover:border-black hover:border-double  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                       Sign up
                     </button>
-                  </Fade>
+                  </Fade> */}
                 </div>
               </div>
             </div>
