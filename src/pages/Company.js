@@ -122,8 +122,8 @@ const Company = () => {
                       </h1>
                       <div className="flex flex-row items-center justify-around w-full text-lg p-1 mt-1.5">
                         <p className="">{job.location}</p>
-                        <p>{}</p>
-                        <p>we pay in crpto</p>
+                        <p>{job.vacancy}</p>
+                        <p>{job.payment}</p>
                       </div>
                     </div>
                     <div className="ml-16 p-5 flex justify-end w-3/12">
